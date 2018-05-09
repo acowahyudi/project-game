@@ -1,28 +1,23 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class BG here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class BG extends World
 {
     private int skor;
-    
-    /**
-     * Constructor for objects of class BG.
-     * 
-     */
+    private int jeda=0;
+    public void act()
+    {
+        if(jeda>0)jeda--;
+        else jeda=100;
+        if(jeda==1){
+        int randomHeight=Greenfoot.getRandomNumber (getHeight()/3);
+        addObject (new ufo2(-(Greenfoot.getRandomNumber (90))), getWidth()+100,randomHeight);
+        }
+    }
     public BG()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(700, 400, 1); 
         setPaintOrder(pesawat.class);
-        setPaintOrder(ufo.class);
-        setPaintOrder(ufo2.class);
-        addObject(new ufo(),50,30);
-        addObject(new ufo2(),300,100);
         addObject(new pesawat(),300,360);
     }
     

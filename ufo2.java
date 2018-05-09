@@ -1,40 +1,57 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-/**
- * Write a description of class ufo2 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class ufo2 extends ufo
 {
-    /**
-     * Act - do whatever the ufo2 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
     int skor;
-    public void act() 
-    {
-        // Add your action code here.
-        BG my =(BG)getWorld();
-        getWorld().showText("SKOR :"+ my.getSkor(),50,30);
-        kenatembak();
-        int a=5;
-        int b=180;
-        move(a);
-        
-        if (isAtEdge()){
-            turn(b);
-           
-            
-        }
-    }   
+    private int vx=0;
+    private boolean toRemove=false;
     
+    public ufo2()
+    {
+        
+        
+    }
+    
+    public ufo2 (int v)
+    {
+        vx=v;
+    }
+       
     public void kenatembak(){
-        if (isTouching(peluru.class)){
+        //removeTouching(ufo.class);
+        pecah();
         BG my =(BG)getWorld();
-        removeTouching(ufo.class);
         my.updSkor(20);
+        if (isAtEdge())toRemove=true;
+    }
+        
+    public void gerak()
+    {
+        move(5);
+        if (isAtEdge()){
+            turn(180);
         }
+    }
+    
+    public void pecah()
+    {
+        for(int i=0;i<10;i++){
+        int px=-20+Greenfoot.getRandomNumber(40);
+        int py=-20+Greenfoot.getRandomNumber(40);
+        getWorld().addObject(new pecahan(getImage()),getX()+px,getY()+py);
+        }
+        toRemove=true;
+    }
+    
+    public void act(){ 
+          
+        BG my =(BG)getWorld();
+        getWorld().showText("SKOR :"+ my.getSkor(),50,30);        
+        if (isTouching(peluru.class)){
+         kenatembak();
+        }
+        
+        if(!toRemove)gerak();
+        else getWorld().removeObject(this);
     }
 }
