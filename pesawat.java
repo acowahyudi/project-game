@@ -18,23 +18,20 @@ public class pesawat extends Actor
         tembak();
         gerakKiri();
         gerakKanan();
-        
+      
         
         
     }    
     
+    private int jeda=0;
     public void tembak () {
-    if (Greenfoot.isKeyDown("G")) {
-            if (getWorld().getObjects(peluru.class).size() <1) {
-            Greenfoot.playSound("tembak.mp3");
-            BG mw = (BG) getWorld();
-            int posX=getX();
-            int posY=getY();
-            mw.addObject(new peluru(),posX,posY-10);
-            }
-         
+            if (Greenfoot.isKeyDown("space")){
+            if(jeda>0)jeda--;
+            if(jeda==1) getWorld().addObject(new peluru(),getX(),getY()-10);
+            if(jeda==0)jeda=12;
         }
     }
+    
     
     public void gerakKiri() {
         if (Greenfoot.isKeyDown("Left")) {
@@ -47,4 +44,7 @@ public class pesawat extends Actor
         setLocation(getX()+ 3,getY());
         }
     }
+    
 }
+
+

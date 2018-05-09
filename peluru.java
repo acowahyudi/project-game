@@ -16,30 +16,18 @@ public class peluru extends Actor
     {
         // Add your action code here.
         gerakPeluru();
-        ufohancur();
  
         }    public void gerakPeluru(){
         int myX=getX();
         int myY=getY();
         int newX=myX;
-        int newY=myY-5;
+        int newY=myY-10;
         setLocation(newX,newY); 
         if (isAtEdge()){
             BG mw = (BG) getWorld();
             mw.removeObject(this);
         
         }
-    }
-    
-    public void ufohancur (){
-    
-        if (isTouching(ufo2.class)){
-            removeTouching(ufo2.class);
-            Greenfoot.playSound("bom1.mp3");
-            BG mw = (BG) getWorld();
-            mw.addObject(new ufo2(),200,Greenfoot.getRandomNumber(50));
-            
-        }
-    }
+    }   
     
 }

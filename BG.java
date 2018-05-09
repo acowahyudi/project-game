@@ -17,9 +17,11 @@ public class BG extends World
     public BG()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(700, 400, 1); 
         setPaintOrder(pesawat.class);
+        setPaintOrder(ufo.class);
         setPaintOrder(ufo2.class);
+        addObject(new ufo(),50,30);
         addObject(new ufo2(),300,100);
         addObject(new pesawat(),300,360);
     }

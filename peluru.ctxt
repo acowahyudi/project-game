@@ -6,6 +6,4 @@ comment1.target=void\ act()
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ peluru\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ gerakPeluru()
-comment3.params=
-comment3.target=void\ ufohancur()
-numComments=4
+numComments=3

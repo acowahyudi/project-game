@@ -34,7 +34,7 @@ public class ufo2 extends ufo
         if (isTouching(peluru.class)){
         BG my =(BG)getWorld();
         removeTouching(ufo.class);
-        my.updSkor(10);
+        my.updSkor(20);
         }
     }
 }
