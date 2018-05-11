@@ -15,5 +15,9 @@ public class Menu_utama extends Actor
     public void act() 
     {
         // Add your action code here.
+        if(Greenfoot.mouseClicked(this))
+        {
+            Greenfoot.setWorld(new BG_Awal());
+        }
     }    
 }
