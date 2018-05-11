@@ -25,7 +25,7 @@ public class pesawat extends Actor
     
     private int jeda=0;
     public void tembak () {
-            if (Greenfoot.isKeyDown("space")){
+            if (Greenfoot.isKeyDown("space")) {
             if(jeda>0)jeda--;
             if(jeda==1) getWorld().addObject(new peluru(),getX(),getY()-10);
             if(jeda==0)jeda=12;

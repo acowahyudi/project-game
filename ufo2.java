@@ -22,6 +22,7 @@ public class ufo2 extends ufo
         pecah();
         BG my =(BG)getWorld();
         my.updSkor(20);
+         Greenfoot.playSound("Bom1.mp3");
         if (isAtEdge())toRemove=true;
     }
         
