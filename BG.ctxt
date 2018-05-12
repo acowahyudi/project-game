@@ -8,4 +8,6 @@ comment3.params=
 comment3.target=int\ getSkor()
 comment4.params=x
 comment4.target=void\ updSkor(int)
-numComments=5
+comment5.params=
+comment5.target=int\ getTimer()
+numComments=6

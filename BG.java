@@ -4,13 +4,21 @@ public class BG extends World
 {
     private int skor;
     private int jeda=0;
+    private int timer=3600;
     public void act()
     {
+        showText("Time Left :"+ getTimer(),70,50);
         if(jeda>0)jeda--;
         else jeda=100;
         if(jeda==1){
         int randomHeight=Greenfoot.getRandomNumber (getHeight()/3);
         addObject (new ufo2(-(Greenfoot.getRandomNumber (90))), getWidth()+100,randomHeight);
+        }
+        
+        if (timer>0)
+        {
+            timer--;
+            if (timer==0) Greenfoot.stop();
         }
     }
     public BG()
@@ -30,6 +38,9 @@ public class BG extends World
         skor+=x;
     }
     
+    public int getTimer(){
+        return timer/60;
+    }
 }
 
 
