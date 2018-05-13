@@ -15,5 +15,9 @@ public class Mulai extends Actor
     public void act() 
     {
         // Add your action code here.
+        if(Greenfoot.mouseClicked(this))
+        {
+            Greenfoot.setWorld(new BG());
+        }
     }    
 }
