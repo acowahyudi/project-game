@@ -16,7 +16,10 @@ public class BG_Awal extends World
     public BG_Awal()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
+        super(700, 400, 1);
+        setPaintOrder(Mulai.class);
+        
+        addObject(new Mulai(),580,286);     
         
         
     }
