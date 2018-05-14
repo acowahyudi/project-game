@@ -33,7 +33,7 @@ public class BG_End extends World
     
     public void act()
     {
-        if(Greenfoot.isKeyDown("Backspace"))
+        if(Greenfoot.mouseClicked(this))
         Greenfoot.setWorld(new BG_Awal());
     }
     
