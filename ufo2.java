@@ -1,6 +1,12 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
-public class ufo2 extends ufo
+/**
+ * Write a description of class ufo2 here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class ufo2 extends Actor
 {
     int skor;
     private int vx=0;
@@ -22,7 +28,6 @@ public class ufo2 extends ufo
         pecah();
         BG my =(BG)getWorld();
         my.updSkor(20);
-         Greenfoot.playSound("Bom1.mp3");
         if (isAtEdge())toRemove=true;
     }
         
@@ -54,5 +59,5 @@ public class ufo2 extends ufo
         
         if(!toRemove)gerak();
         else getWorld().removeObject(this);
-    }
+    }    
 }
