@@ -7,7 +7,7 @@ public class BG extends World
     private int timer=3600;
     public void act()
     {
-        if(timer==2400)
+        if(timer==2400 || timer==1200)
         {
             setPaintOrder(ufo3.class);
             addObject(new ufo3(),Greenfoot.getRandomNumber(700),Greenfoot.getRandomNumber(100));
