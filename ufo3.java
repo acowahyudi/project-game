@@ -25,9 +25,10 @@ public class ufo3 extends Actor
         
     public void gerak()
     {
-        move(5);
-        if (isAtEdge()){
-            turn(180);
+        move(15);
+        if (isAtEdge())
+        {
+            getWorld().removeObject(this);
         }
     }
     

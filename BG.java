@@ -10,14 +10,16 @@ public class BG extends World
         if(timer==2400 || timer==1200)
         {
             setPaintOrder(ufo3.class);
-            addObject(new ufo3(),Greenfoot.getRandomNumber(700),Greenfoot.getRandomNumber(100));
+            addObject(new ufo3(),Greenfoot.getRandomNumber(10),Greenfoot.getRandomNumber(100));
         }
         showText("Time Left :"+ getTimer(),70,50);
         if(jeda>0)jeda--;
         else jeda=100;
         if(jeda==1){
         int randomHeight=Greenfoot.getRandomNumber (getHeight()/3);
-        addObject (new ufo2(-(Greenfoot.getRandomNumber (90))), getWidth()+100,randomHeight);
+        addObject (new ufo2(Greenfoot.getRandomNumber (90)), -(getWidth()),randomHeight);
+        Greenfoot.delay(5);
+        addObject (new ufo2(-(Greenfoot.getRandomNumber (180))), getWidth(),randomHeight-10);
         }
         
         
