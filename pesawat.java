@@ -27,21 +27,24 @@ public class pesawat extends Actor
     public void tembak () {
             if (Greenfoot.isKeyDown("space")) {
             if(jeda>0)jeda--;
-            if(jeda==1) getWorld().addObject(new peluru(),getX(),getY()-10);
-            if(jeda==0)jeda=12;
+            if(jeda==1) 
+            {
+                getWorld().addObject(new peluru(),getX(),getY()-10); Greenfoot.playSound("Shot.mp3");
+            }
+            if(jeda==0)jeda=30;
         }
     }
     
     
     public void gerakKiri() {
         if (Greenfoot.isKeyDown("Left")) {
-        setLocation(getX()-3,getY());
+        setLocation(getX()-2,getY());
         }
     }
     
     public void gerakKanan() {
         if (Greenfoot.isKeyDown("Right")) {
-        setLocation(getX()+ 3,getY());
+        setLocation(getX()+ 2,getY());
         }
     }
     
