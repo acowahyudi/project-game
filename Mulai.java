@@ -17,6 +17,8 @@ public class Mulai extends Actor
         // Add your action code here.
         if(Greenfoot.mouseClicked(this))
         {
+            Greenfoot.playSound("Click.mp3");
+            Greenfoot.delay(30);
             Greenfoot.setWorld(new BG());
         }
     }    

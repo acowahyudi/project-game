@@ -16,6 +16,7 @@ public class ufo3 extends Actor
        
     public void kenatembak(){
         //removeTouching(ufo.class);
+        Greenfoot.playSound("Up.mp3");
         pecah();
         BG my =(BG)getWorld();
         my.updSkor(20);

@@ -25,6 +25,7 @@ public class ufo2 extends Actor
        
     public void kenatembak(){
         //removeTouching(ufo.class);
+        Greenfoot.playSound("hancur.mp3");
         pecah();
         BG my =(BG)getWorld();
         my.updSkor(20);
@@ -52,7 +53,7 @@ public class ufo2 extends Actor
     public void act(){ 
           
         BG my =(BG)getWorld();
-        getWorld().showText("SKOR :"+ my.getSkor(),50,30);        
+                
         if (isTouching(peluru.class)){
          kenatembak();
         }

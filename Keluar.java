@@ -17,6 +17,8 @@ public class Keluar extends Actor
         // Add your action code here.
         if (Greenfoot.mouseClicked(this))
         {
+            Greenfoot.playSound("Click.mp3");
+            Greenfoot.delay(30);
             System.exit(1);
         }
     }    

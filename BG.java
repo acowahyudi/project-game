@@ -5,6 +5,7 @@ public class BG extends World
     private int skor;
     private int jeda=0;
     private int timer=3600;
+    
     public void act()
     {
         if(timer==2400 || timer==1200)
@@ -12,7 +13,9 @@ public class BG extends World
             setPaintOrder(ufo3.class);
             addObject(new ufo3(),Greenfoot.getRandomNumber(10),Greenfoot.getRandomNumber(100));
         }
-        showText("Time Left :"+ getTimer(),70,50);
+        showText("SKOR :"+ getSkor(),350,20);
+        showText("Time Left :"+ getTimer(),350,40);
+        
         if(jeda>0)jeda--;
         else jeda=100;
         if(jeda==1){
@@ -26,17 +29,16 @@ public class BG extends World
         if (timer>0)
         {
             timer--;
-            if (timer==0) Greenfoot.stop();
-        }
-        
-        
+            if (timer==0) {Greenfoot.setWorld(new BG());}
+   
+       }    
     }
     public BG()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(700, 400, 1,true); 
+        super(700, 460, 1,true); 
         setPaintOrder(pesawat.class);
-        addObject(new pesawat(),300,360);
+        addObject(new pesawat(),300,420);
         
     }
     
