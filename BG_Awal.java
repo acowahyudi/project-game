@@ -20,12 +20,9 @@ public class BG_Awal extends World
         Greenfoot.playSound("MainMenu.mid");
         setPaintOrder(Mulai.class);
         setPaintOrder(Keluar.class);
-        setPaintOrder(Cara_main.class);
-        setPaintOrder(about_us.class);
+       
         addObject(new Mulai(),580,286);     
         addObject(new Keluar(),580,343);
-        addObject(new Cara_main(),120,286);
-        addObject(new about_us(),120,343);
         
     }
 }
