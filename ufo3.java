@@ -15,18 +15,19 @@ public class ufo3 extends Actor
    
        
     public void kenatembak(){
-        //removeTouching(ufo.class);
         Greenfoot.playSound("Up.mp3");
         pecah();
         BG my =(BG)getWorld();
         my.updSkor(20);
-        //Greenfoot.playSound("Bom1.mp3");
+        my.tambahTimer(1800);
+        my.tambahSpeed(5);
         if (isAtEdge())toRemove=true;
     }
         
     public void gerak()
     {
-        move(15);
+        BG my =(BG)getWorld();
+        move(my.getSpeed());
         if (isAtEdge())
         {
             getWorld().removeObject(this);
