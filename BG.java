@@ -2,11 +2,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class BG extends World
 {
-    private int skor;
+    int skor;
     private int jeda=0;
     private int timer=3600;
     private int speed=5;
-    
     public void act()
     {
         if(timer==2400 || timer==1200)
@@ -33,7 +32,11 @@ public class BG extends World
         if (timer>0)
         {
             timer--;
-            if (timer==0) {Greenfoot.setWorld(new BG_End());}
+            if (timer==0) {
+                BG_Awal BGAwal = new BG_Awal();
+                BGAwal.bgmusic.stop();
+                Greenfoot.setWorld(new BG_End());
+            }
    
        }    
     }

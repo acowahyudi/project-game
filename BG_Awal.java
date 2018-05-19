@@ -8,21 +8,33 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class BG_Awal extends World
 {
-
-    /**
-     * Constructor for objects of class BG_Awal.
-     * 
-     */
+    public GreenfootSound bgmusic = new GreenfootSound("MainMenu.mid");
+    
+    
     public BG_Awal()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        
         super(700, 400, 1);
-        Greenfoot.playSound("MainMenu.mid");
         setPaintOrder(Mulai.class);
         setPaintOrder(Keluar.class);
-       
+        setPaintOrder(cara_main.class);
+        setPaintOrder(about.class);
+        
         addObject(new Mulai(),580,286);     
         addObject(new Keluar(),580,343);
-        
+        addObject(new cara_main(),120,286);
+        addObject(new about(),120,343);
+    }
+    
+    public void started()
+    {
+        bgmusic.playLoop();
+    }
+    
+    public void stopped()
+    {
+        bgmusic.stop();
     }
 }
+

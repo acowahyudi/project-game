@@ -37,6 +37,4 @@ public class BG_End extends World
         if(Greenfoot.mouseClicked(this))
         Greenfoot.setWorld(new BG_Awal());
     }
-    
-    
 }
